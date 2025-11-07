@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --background-color: rgb(34, 33, 33);
+    --secondary-color: #030303;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-size: 16px;
+    --line-height: 1.6;
+}
+body {
+   background-color: var(--background-color);
+   color: white;
+   font-family: var(--font-family);
+   font-size: var(--font-size);
+   line-height: var(--line-height);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main{
+    width: 70%;
+}

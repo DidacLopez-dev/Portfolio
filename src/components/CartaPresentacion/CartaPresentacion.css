@@ -1,0 +1,61 @@
+section{
+    display: flex;
+    gap: 20px;
+}
+
+div.foto-presentacion{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    & img{
+        border-radius: 50%;
+        width: 220px;
+        height: 220px;
+    }
+    & p{
+        text-align: center;
+        margin-top: 10px;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        span{
+            font-weight: bold;
+        }
+    }
+    & .ubicacion{
+
+        margin-top: 15px;
+        text-align: center;
+    }
+    & .icons-container{
+        display: flex;
+        gap: 15px;
+        margin-top: 15px;
+        & i{
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s;
+            &:hover{
+                color: gray;
+            }
+        }
+    }
+}
+div.descripcion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    margin: 20px;
+    & h1{
+       font-size: 60px;
+    }
+    & h4{
+        margin-bottom: 20px;
+        color: rgb(160, 159, 159);
+    }
+}

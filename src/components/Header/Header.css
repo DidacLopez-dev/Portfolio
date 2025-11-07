@@ -1,0 +1,14 @@
+header{
+    border: 1px solid;
+    width: 100%;
+    position: sticky;
+    backdrop-filter: blur(10px);
+    padding: 10px 0;
+}
+
+div.container-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
