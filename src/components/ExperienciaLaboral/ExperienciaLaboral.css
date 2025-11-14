@@ -1,0 +1,99 @@
+.experiencialaboral-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2em;
+    ul{
+        margin: 0;
+        padding-left: 1.4em;
+        position: relative;
+        list-style: none;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.em;
+            bottom: 1em;
+            width: 2px;
+            background-color: rgb(136, 124, 228);
+        }
+        
+        h3{
+            font-size: 1.3em;
+        }
+        li{
+            margin-bottom: 1em;
+            position: relative;
+            padding-left: 1.5em;
+            
+            &::before {
+                content: '';
+                position: absolute;
+                left: -30px;
+                top: 0.6em;
+                width: 14px;
+                height: 14px;
+                background-color: rgb(136, 124, 228);
+                border: 2px solid var(--background-color);
+                border-radius: 50%;
+                z-index: 10;
+            }
+            
+            h3{
+                color: rgb(136, 124, 228);
+            }
+        }
+    }
+}
+
+.container-titulo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    & i{
+        font-size: 2rem;
+    }  
+    h2 {
+        font-size: 35px;
+    }
+}
+
+.icons-container {
+    display: flex;
+    gap: 1rem;
+    font-size: 1rem;
+    margin-top: 6px;
+    & .angular-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(74, 68, 119, 0.63);
+        padding: 2px 6px 2px 6px;
+        border-radius: 10px;
+        svg {
+            width: 1.2rem;
+            fill: white;
+        }
+       p {
+            margin: 0;
+            font-style: italic;
+            font-size: 0.8rem;
+       }
+    }
+
+    & i{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(74, 68, 119, 0.63);
+        padding: 2px 6px 2px 6px;
+        border-radius: 10px;
+        gap: 4px;
+        font-size: 0.8rem;
+        p {
+            margin: 0;
+            font-style: italic;
+        }
+    }
+}

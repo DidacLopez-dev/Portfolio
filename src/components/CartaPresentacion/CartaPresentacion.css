@@ -55,6 +55,7 @@ div.descripcion{
        font-size: 60px;
     }
     & h4{
+        font-size: 18px;
         margin-bottom: 20px;
         color: rgb(160, 159, 159);
     }
