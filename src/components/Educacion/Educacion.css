@@ -1,6 +1,7 @@
-.experiencialaboral-container {
+.educacion-container{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 1rem;
     padding: 2em;
     ul{
@@ -20,12 +21,16 @@
         
         h3{
             font-size: 1.3em;
+            flex-wrap: wrap;
         }
         li{
             margin-bottom: 1em;
             position: relative;
             padding-left: 1.5em;
-            
+
+            width: 100%;
+            gap: 20px;
+            display: flex;
             &::before {
                 content: '';
                 position: absolute;
@@ -34,6 +39,7 @@
                 width: 14px;
                 height: 14px;
                 background-color: rgb(136, 124, 228);
+                border: 2px solid var(--background-color);
                 border-radius: 50%;
                 z-index: 10;
             }
@@ -45,53 +51,23 @@
     }
 }
 
-.container-titulo {
+.container-info{
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    & i{
-        font-size: 2rem;
-    }  
-    h2 {
-        font-size: 35px;
-    }
+    flex-direction: column;
+    max-width: 45%;
 }
-
-.icons-container {
-    display: flex;
-    gap: 1rem;
-    font-size: 1rem;
-    margin-top: 6px;
-    & .angular-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: rgba(74, 68, 119, 0.63);
-        padding: 2px 6px 2px 6px;
-        border-radius: 10px;
-        svg {
-            width: 1.2rem;
-            fill: white;
-        }
-       p {
-            margin: 0;
-            font-style: italic;
-            font-size: 0.8rem;
-       }
+.container-descripcion{
+    max-width: 50%;
+    & a{
+        color: rgb(105, 99, 156);
+        font-size: 18px;
+        font-style: italic;
+        font-weight: bold;
     }
-
-    & i{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: rgba(74, 68, 119, 0.63);
-        padding: 2px 6px 2px 6px;
-        border-radius: 10px;
-        gap: 4px;
-        font-size: 0.8rem;
-        p {
-            margin: 0;
-            font-style: italic;
-        }
+    p{
+        margin-top: 5px;
+        font-style: italic;
+        font-family:Inter, sans-serif;;
+        font-size: 16px;
     }
 }

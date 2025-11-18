@@ -1,4 +1,4 @@
-section{
+.container-carta{
     display: flex;
     gap: 20px;
 }
@@ -31,7 +31,7 @@ div.foto-presentacion{
         margin-top: 15px;
         text-align: center;
     }
-    & .icons-container{
+    & .icons-div{
         display: flex;
         gap: 15px;
         margin-top: 15px;
@@ -57,6 +57,6 @@ div.descripcion{
     & h4{
         font-size: 18px;
         margin-bottom: 20px;
-        color: rgb(160, 159, 159);
+        color: rgb(136, 124, 228);
     }
 }
