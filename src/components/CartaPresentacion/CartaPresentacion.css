@@ -1,33 +1,26 @@
 .container-carta{
-    display: flex;
-    gap: 20px;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    border-radius: 12px;
+    border-bottom: 4px solid rgba(74, 68, 119, 0.705);
+    border-top: 4px solid rgba(74, 68, 119, 0.705);
 }
 
 div.foto-presentacion{
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 30px;
+    justify-content: center;
+    width: 100%;
+    flex: 1;
     & img{
         border-radius: 50%;
         width: 220px;
         height: 220px;
     }
-    & p{
-        text-align: center;
-        margin-top: 10px;
-        font-size: 18px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        span{
-            font-weight: bold;
-        }
-    }
     & .ubicacion{
-
+        display: flex;
         margin-top: 15px;
         text-align: center;
     }
@@ -49,14 +42,14 @@ div.descripcion{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 30px;
-    margin: 20px;
+    padding: 40px;
+    flex: 1;
     & h1{
        font-size: 60px;
     }
     & h4{
         font-size: 18px;
         margin-bottom: 20px;
-        color: rgb(136, 124, 228);
+        color: rgba(136, 124, 228, 0.671);
     }
 }
