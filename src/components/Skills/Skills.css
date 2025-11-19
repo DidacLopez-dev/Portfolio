@@ -1,0 +1,68 @@
+section{
+    gap: 1rem;
+    padding: 2em;
+    width: 100%;
+    border: 1px solid;
+}
+
+.container-titulo-skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    & i{
+        font-size: 2rem;
+    }  
+    h2 {
+        font-size: 35px;
+    }
+}
+
+table{
+    border: 1px solid;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.table-frontend{
+    border: none;
+    margin-top: 10px;
+}
+.table-frontend thead td {
+    text-align: center;
+    background-color: rgb(91, 82, 164);
+        border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+
+.table-frontend tbody tr td{
+    padding: 10px;
+}
+.frontend-list li{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+    background-color:rgba(74, 68, 119, 0.63);
+    width: fit-content;
+    padding: 2px 12px;
+    border-radius: 20px;
+    p{
+        font-size: 14px;
+        font-style: italic;
+    }
+}
+.frontend-list li svg{
+    width: 18px;
+    height: 18px;
+}
+
+
+.frontend-list{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+

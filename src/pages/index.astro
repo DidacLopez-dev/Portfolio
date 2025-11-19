@@ -3,6 +3,7 @@ import Header from '../components//Header/Header.astro';
 import CartaPresentacion from '../components/CartaPresentacion/CartaPresentacion.astro';
 import Educacion from '../components/Educacion/Educacion.astro';
 import ExperienciaLaboral from '../components/ExperienciaLaboral/ExperienciaLaboral.astro';
+import Skills from '../components/Skills/Skills.astro';
 import '../styles.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 ---
@@ -21,7 +22,10 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 		<Header />
 		<main>
 			<CartaPresentacion />
-			<ExperienciaLaboral />
+			<div class="container-experience_skills">
+				<ExperienciaLaboral />
+				<Skills />
+			</div>
 			<Educacion />
 		</main>
 	</body>

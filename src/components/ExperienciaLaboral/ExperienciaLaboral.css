@@ -29,7 +29,7 @@
             &::before {
                 content: '';
                 position: absolute;
-                left: -30px;
+                left: -28px;
                 top: 0.6em;
                 width: 14px;
                 height: 14px;
