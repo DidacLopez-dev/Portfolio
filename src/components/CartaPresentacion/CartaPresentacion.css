@@ -18,6 +18,9 @@ div.foto-presentacion{
         border-radius: 50%;
         width: 220px;
         height: 220px;
+        object-fit: cover;
+        object-position: center bottom;
+        box-shadow: 0 0 10px rgb(136, 124, 228);
     }
     & .ubicacion{
         display: flex;
@@ -51,5 +54,59 @@ div.descripcion{
         font-size: 18px;
         margin-bottom: 20px;
         color: rgba(136, 124, 228, 0.671);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container-carta {
+        grid-template-columns: 1fr;
+        padding: 1.5em;
+    }
+    
+    div.descripcion {
+        padding: 20px;
+        & h1 {
+            font-size: 40px;
+        }
+        & h4 {
+            font-size: 16px;
+        }
+    }
+    
+    div.foto-presentacion {
+        & img {
+            width: 180px;
+            height: 180px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .container-carta {
+        padding: 1em;
+    }
+    
+    div.descripcion {
+        padding: 15px;
+        & h1 {
+            font-size: 32px;
+        }
+        & h4 {
+            font-size: 14px;
+        }
+        & p {
+            font-size: 14px;
+        }
+    }
+    
+    div.foto-presentacion {
+        & img {
+            width: 150px;
+            height: 150px;
+        }
+        & .icons-div i {
+            font-size: 18px;
+        }
     }
 }

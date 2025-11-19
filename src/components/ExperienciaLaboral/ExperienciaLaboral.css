@@ -96,3 +96,55 @@
         }
     }
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .experiencialaboral-container {
+        padding: 1.5em;
+        
+        ul {
+            padding-left: 1em;
+            
+            h3 {
+                font-size: 1.1em;
+            }
+            li::before {
+                left: -23px;
+            }
+        }
+    }
+    
+    .container-titulo h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .experiencialaboral-container {
+        padding: 1em;
+        
+        ul {
+            h3 {
+                font-size: 1em;
+            }
+            
+            li p {
+                font-size: 14px;
+            }
+        }
+    }
+    
+    .container-titulo {
+        h2 {
+            font-size: 24px;
+        }
+        i {
+            font-size: 1.5rem;
+        }
+    }
+    
+    .icons-container {
+        gap: 0.5rem;
+        font-size: 0.9rem;
+    }
+}

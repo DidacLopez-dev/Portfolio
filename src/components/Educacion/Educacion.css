@@ -37,7 +37,7 @@
             &::before {
                 content: '';
                 position: absolute;
-                left: -30px;
+                left: -28px;
                 top: 0.6em;
                 width: 14px;
                 height: 14px;
@@ -71,5 +71,59 @@
         font-style: italic;
         font-family:Inter, sans-serif;;
         font-size: 16px;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .educacion-container {
+        padding: 1.5em;
+        
+        ul {
+            padding-left: 1em;
+            
+            h3 {
+                font-size: 1.1em;
+            }
+            
+            li {
+                flex-direction: column;
+                gap: 10px;
+                &::before {
+                    left: -23px;
+                }
+            }
+        }
+    }
+    
+    .container-info,
+    .container-descripcion {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .educacion-container {
+        padding: 1em;
+        
+        ul {
+            h3 {
+                font-size: 1em;
+            }
+            
+            li p {
+                font-size: 14px;
+            }
+        }
+    }
+    
+    .container-descripcion {
+        a {
+            font-size: 16px;
+        }
+        p {
+            font-size: 14px;
+        }
     }
 }

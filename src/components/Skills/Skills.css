@@ -17,27 +17,8 @@ section{
     }
 }
 
-table{
-    width: 100%;
-    border-collapse: collapse;
-}
 
 
-.table-frontend{
-    border: none;
-    margin-top: 10px;
-}
-.table-frontend thead td {
-    text-align: center;
-    background-color: rgb(91, 82, 164);
-        border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
-
-
-.table-frontend tbody tr td{
-    padding: 10px;
-}
 .frontend-list li{
     display: flex;
     align-items: center;
@@ -73,7 +54,7 @@ table{
     div{
         border-bottom-left-radius: 12px;
         border-bottom-right-radius: 12px;
-        border-bottom: 2px solid rgb(91, 82, 164);
+        border-bottom: 4px solid rgb(91, 82, 164);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -89,6 +70,38 @@ table{
             list-style: none;
             padding: 0;
             padding: 20px;
+            justify-content: center;
         }
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container-tecnologias {
+        grid-template-columns: 1fr;
+    }
+    
+    .container-titulo-skills h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding-top: 1em;
+    }
+    
+    .container-titulo-skills {
+        h2 {
+            font-size: 24px;
+        }
+        i {
+            font-size: 1.5rem;
+        }
+    }
+    
+    .frontend-list li {
+        padding: 2px 8px;
+        font-size: 12px;
     }
 }

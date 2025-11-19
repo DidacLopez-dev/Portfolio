@@ -3,11 +3,12 @@ header{
     position: sticky;
     top: 0;
     z-index: 100;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(40px);
     padding: 6px 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border: transparent;
     nav{
         ul.nav-links{
             list-style: none;
@@ -42,6 +43,52 @@ div.container-logo {
         width: 50px;
         height: 50px;
         object-fit: cover;
+        object-position: center bottom;
         border-radius: 50%;
+        box-shadow: 0 0 5px rgb(136, 124, 228);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+        position: static;
+    }
+    
+    nav ul.nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px !important;
+        margin-right: 0 !important;
+    }
+    
+    div.container-logo {
+        padding: 5px;
+        h1 {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul.nav-links {
+        gap: 8px !important;
+        font-size: 14px;
+        li a {
+            font-size: 14px;
+        }
+    }
+    
+    div.container-logo {
+        img {
+            width: 40px;
+            height: 40px;
+        }
+        h1 {
+            font-size: 16px;
+        }
     }
 }
