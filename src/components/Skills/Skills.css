@@ -32,6 +32,11 @@ section{
         font-size: 14px;
         font-style: italic;
     }
+    &:hover{
+        transform: translateY(-2px) scale(1.05);
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 6px rgb(91, 82, 164);
+    }
 }
 .frontend-list li svg{
     width: 18px;
@@ -68,7 +73,6 @@ section{
         }
         ul{
             list-style: none;
-            padding: 0;
             padding: 20px;
             justify-content: center;
         }
