@@ -9,10 +9,47 @@ import fotoPerfil from '/src/assets/imgs/Foto_perfil.jpg';
     </div>
     <nav>
         <ul class="nav-links">
-            <li><i class="fa-regular fa-address-card"></i><a href="#carta-presentacion">Carta de Presentación</a></li>
-            <li><i class="fa-solid fa-code-fork"></i><a href="#experiencia-laboral">Experiencia & Tecnologias</a></li>
-            <li><i class="fa-solid fa-graduation-cap"></i><a href="#educacion">Educación</a></li>
-            <li><i class="fa-solid fa-envelope"></i><a href="mailto:didaclopezz10@gmail.com">Contacto</a></li>
+            <li><i class="fa-regular fa-address-card"></i><a href="#carta-presentacion" data-i18n="link_carta">Carta de Presentación</a></li>
+            <li><i class="fa-solid fa-code-fork"></i><a href="#experiencia-laboral" data-i18n="link_experiencia">Experiencia & Tecnologias</a></li>
+            <li><i class="fa-solid fa-graduation-cap"></i><a href="#educacion" data-i18n="link_educacion">Educación</a></li>
+            <li><i class="fa-solid fa-envelope"></i><a href="mailto:didaclopezz10@gmail.com" data-i18n="link_contacto">Contacto</a></li>
         </ul>
+        <div class="language-container">
+            <i class="bi bi-translate"></i>
+            <div class="language-selector">
+                <div class="language">Catalan</div>
+                <div class="language">Spanish</div>
+                <div class="language">English</div>   
+            </div>
+        </div>
     </nav>
 </header>
+
+<script>
+import { I18n } from "../../ts/i18n";
+
+    const languageIcon = document.querySelector('.bi-translate');
+    const languageSelector = document.querySelector('.language-selector');
+    const languages = document.querySelectorAll(".language")
+    const i18 = new I18n();
+    languageIcon?.addEventListener('click', () => {
+        languageSelector?.classList.toggle('show');
+    });
+    document.addEventListener('click', (e) => {
+    if (languageSelector?.classList.contains('show') && !languageSelector.contains(e.target as any) &&
+        e.target !== languageIcon) {
+        languageSelector.classList.remove('show');
+    }
+
+});
+languages.forEach(element =>{
+    element.addEventListener("click", (e)=>{
+
+        const lang:any = e.target;
+        console.log(lang.textContent);
+
+        i18.updatePage(lang.textContent)
+        languageSelector?.classList.remove('show');
+    })
+})
+</script>
