@@ -29,5 +29,17 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 				<Educacion/>
 			</div>
 		</main>
+		
+		<script>
+			import { I18n } from '../ts/i18n';
+			
+			document.addEventListener('DOMContentLoaded', () => {
+				const i18n = new I18n();
+				
+				// Intentar cargar idioma guardado o usar español por defecto
+				const savedLanguage = localStorage.getItem('selectedLanguage') || 'Spanish';
+				i18n.updatePage(savedLanguage);
+			});
+		</script>
 	</body>
 </html>

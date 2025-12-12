@@ -17,9 +17,9 @@ import fotoPerfil from '/src/assets/imgs/Foto_perfil.jpg';
         <div class="language-container">
             <i class="bi bi-translate"></i>
             <div class="language-selector">
-                <div class="language">Catalan</div>
                 <div class="language">Spanish</div>
                 <div class="language">English</div>   
+                <div class="language">Catalan</div>
             </div>
         </div>
     </nav>
@@ -42,14 +42,22 @@ import { I18n } from "../../ts/i18n";
     }
 
 });
+// Establecer idioma por defecto al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+    i18.updatePage('Spanish'); // Idioma por defecto
+});
+
 languages.forEach(element =>{
     element.addEventListener("click", (e)=>{
-
         const lang:any = e.target;
-        console.log(lang.textContent);
-
-        i18.updatePage(lang.textContent)
+        console.log('Idioma seleccionado:', lang.textContent);
+        
+        // Actualizar la página con el nuevo idioma
+        i18.updatePage(lang.textContent);
         languageSelector?.classList.remove('show');
+        
+        // Guardar el idioma seleccionado en localStorage (opcional)
+        localStorage.setItem('selectedLanguage', lang.textContent);
     })
 })
 </script>
