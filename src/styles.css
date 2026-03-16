@@ -43,11 +43,36 @@ main{
     min-height: 500px;
 }
 
-/* .container-carta{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    min-height: 500px;
-} */
+.pildora{
+ display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+    background-color:rgba(74, 68, 119, 0.63);
+    width: fit-content;
+    padding: 2px 12px;
+    border-radius: 20px;
+    p{
+        font-size: 14px;
+        font-style: italic;
+    }
+    i,
+    .pildora-svg {
+        width: 16px;
+        height: 16px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .pildora-svg {
+        object-fit: contain;
+    }
+    &:hover{
+        transform: translateY(-2px) scale(1.05);
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 6px rgb(91, 82, 164);
+    }
+}
 
 /* Media Queries para Responsive */
 @media (max-width: 1024px) {

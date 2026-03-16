@@ -1,0 +1,18 @@
+---
+interface Props {
+    name: string;
+    icon?: string;
+    svg?: string;
+}
+
+const { name, icon, svg } = Astro.props as Props;
+---
+
+<div>
+    <div class="pildora">
+        {svg ? <img src={svg} alt={`Icono de ${name}`} class="pildora-svg" loading="lazy" /> : null}
+        {!svg && icon && <i class={icon}></i>}
+        <slot></slot>
+        <p>{name}</p>
+    </div>
+</div>

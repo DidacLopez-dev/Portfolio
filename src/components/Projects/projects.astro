@@ -1,0 +1,101 @@
+---
+import Pildora from "../Pildora.astro";
+import './projects.css';
+import ForkedImage from '/src/assets/imgs/proyecto-imagen.png';
+import FEC from '/src/assets/imgs/gestio-usuaris.png';
+import VueSvg from '/src/assets/svgs/vue.svg';
+import PHPSvg from '/src/assets/svgs/php_dark.svg';
+import LaravelSvg from '/src/assets/svgs/laravel.svg';
+import MysqlSvg from '/src/assets/svgs/mysql-wordmark-dark.svg';
+import JavascriptSvg from '/src/assets/svgs/javascript.svg';
+type Technologies = {
+    name: Record<string, string>;
+    icon?: Record<string, string>;
+    svg?: Record<string, string>;
+};
+
+type Project = {
+    title: string;
+    description: string;
+    img: string;
+    link: string;
+    tecnologies: Technologies;
+};
+
+const projects: Project[] = [
+    {
+        title: "Gestión de Equipos Deportivos",
+        description: "Aplicación web para la gestión de una liga escolar, permitiendo a los usuarios crear equipos, gestionar jugadores y organizar partidos.",
+        img: FEC.src,
+        link: "https://gitlab.com/jarias10/p1_2526_gr08_lligaescolar",
+        tecnologies: {
+            svg:{
+                "PHP": String(PHPSvg.src),
+                "JavaScript": String(JavascriptSvg.src),
+                "MySQL": String(MysqlSvg.src)
+            },
+            icon:{
+                "JavaScript": "fa-brands fa-js",
+                "PHP": "fa-brands fa-php",
+                "MySQL": "fa-solid fa-database"
+            },
+            name:{
+                "JavaScript": "JavaScript",
+                "PHP": "PHP",
+                "MySQL": "MySQL"
+            }
+        }
+    },
+    {
+        title: "Gestion de Restaurantes",
+        description: "Aplicación web para la gestión de restaurantes, incluyendo reservas, menús y administración de clientes.",
+        img: ForkedImage.src,
+        link: "https://gitlab.com/didaclopezz10/p2_2526_gr05_gestioderestaurants",
+        tecnologies: {
+            svg:{
+                "VUE": String(VueSvg.src),
+                "Laravel": String(LaravelSvg.src),
+                "MySQL": String(MysqlSvg.src)
+            },
+            icon:{
+                "VUE": "fa-brands fa-vue",
+                "PHP": "fa-brands fa-php",
+                "MySQL": "fa-solid fa-database"
+            },
+            name:{
+                "VUE": "Vue.js",
+                "Laravel": "Laravel",
+                "MySQL": "MySQL"
+            }
+        }
+    },
+]
+---
+
+<section class="projects-container" id="projects">
+    <div class="container-titulo">
+        <i class="fa-solid fa-code"></i>
+        <h2 data-i18n="titulo_proyectos">Proyectos</h2>
+    </div>
+    <div class="card-container">
+        {projects.map(proyecto => (
+            <div class="card">
+                <img src={proyecto.img} alt={proyecto.title} class="card-img" />
+                <div class="card-body">
+                    <h3 class="card-title">{proyecto.title}</h3>
+                    <p class="card-description">{proyecto.description}</p>
+                    <div class="tecnologies_used">
+                        {Object.entries(proyecto.tecnologies.name).map(([tecnology, technologyName]) => (
+                            <Pildora
+                                name={technologyName}
+                                svg={proyecto.tecnologies.svg?.[tecnology]}
+                                icon={proyecto.tecnologies.icon?.[tecnology]}
+                            />
+                        ))}
+                    </div>
+                    <a href={proyecto.link} class="card-link" target="_blank" data-i18n="ver_proyecto">Ver Proyecto</a>
+                </div>
+            </div>
+        ))}
+    </div>
+</section>
