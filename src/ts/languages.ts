@@ -49,6 +49,13 @@ export const languages = {
         descripcion_detallada_estudios2_2: "Además, realicé proyectos prácticos que me permitieron aplicar mis conocimientos en situaciones del mundo real.",
         informacion_centro2: "Informacion del centro <i class='fa-solid fa-arrow-right-long'></i>",
 
+        // Proyectos
+        titulo_proyectos: "Proyectos",
+        titulo_card_proyectos1: "Gestión de Equipos Deportivos",
+        descripcion_card_proyectos1:  "Aplicación web para la gestión de una liga escolar, permitiendo a los usuarios crear equipos, gestionar jugadores y organizar partidos.",
+        titulo_card_proyectos2: "Gestion de Restaurantes",
+        descripcion_card_proyectos2: "Aplicación web para la gestión de restaurantes, incluyendo reservas, menús y administración de clientes.",
+        ver_proyecto: "Ver Proyecto",
     },
     English: {
         // Header
@@ -100,6 +107,14 @@ export const languages = {
         descripcion_detallada_estudios2: "I studied computer networks and servers, obtaining a solid understanding of the concepts and practices in this field.",
         descripcion_detallada_estudios2_2: "In addition, I carried out practical projects that allowed me to apply my knowledge in real-world situations.",
         informacion_centro2: "Center Information <i class='fa-solid fa-arrow-right-long'></i>",
+
+        // Proyectos
+        titulo_proyectos: "Projects",
+        titulo_card_proyectos1: "Sports Team Management",
+        descripcion_card_proyectos1:  "Web application for managing a school league, allowing users to create teams, manage players, and organize matches.",
+        titulo_card_proyectos2: "Restaurant Management",
+        descripcion_card_proyectos2: "Web application for restaurant management, including reservations, menus, and customer administration.",
+        ver_proyecto: "View Project",
     },
     Catalan: {
         // Header
@@ -150,5 +165,13 @@ export const languages = {
         descripcion_detallada_estudios2: "Vaig estudiar sobre xarxes i servidors informàtics, obtenint una sòlida comprensió dels conceptes i pràctiques en aquest camp.",
         descripcion_detallada_estudios2_2: "A més, vaig realitzar projectes pràctics que em van permetre aplicar els meus coneixements en situacions del món real.",
         informacion_centro2: "Informació del centre <i class='fa-solid fa-arrow-right-long'></i>",
+
+        // Proyectos
+        titulo_proyectos: "Projectes",
+        titulo_card_proyectos1: "Gestió d'Equips Esportius",
+        descripcion_card_proyectos1:  "Aplicació web per a la gestió d'una lliga escolar, permetent als usuaris crear equips, gestionar jugadors i organitzar partits.",
+        titulo_card_proyectos2: "Gestió de Restaurants",
+        descripcion_card_proyectos2: "Aplicació web per a la gestió de restaurants, incloent reserves, menús i administració de clients.",
+        ver_proyecto: "Veure Projecte",
     }
 };

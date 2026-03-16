@@ -78,12 +78,12 @@ const projects: Project[] = [
         <h2 data-i18n="titulo_proyectos">Proyectos</h2>
     </div>
     <div class="card-container">
-        {projects.map(proyecto => (
+        {projects.map((proyecto, index) => (
             <div class="card">
                 <img src={proyecto.img} alt={proyecto.title} class="card-img" />
                 <div class="card-body">
-                    <h3 class="card-title">{proyecto.title}</h3>
-                    <p class="card-description">{proyecto.description}</p>
+                    <h3 class="card-title" data-i18n={"titulo_card_proyectos" + (index + 1)}>{proyecto.title}</h3>
+                    <p class="card-description" data-i18n={"descripcion_card_proyectos" + (index + 1)}>{proyecto.description}</p>
                     <div class="tecnologies_used">
                         {Object.entries(proyecto.tecnologies.name).map(([tecnology, technologyName]) => (
                             <Pildora
